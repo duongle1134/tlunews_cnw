@@ -1,2 +1,2 @@
 import sql
-tài khoản admin :1admin .mật khẩu:123456
+tài khoản admin :admin1 .mật khẩu:1
