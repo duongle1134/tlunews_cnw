@@ -41,3 +41,29 @@ CREATE TABLE users (
     email VARCHAR(255),                            -- Địa chỉ email của người dùng
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP  -- Ngày tạo tài khoản, mặc định là thời gian hiện tại
 );
+-- Dữ liệu mẫu cho bảng `admin`
+INSERT INTO admin (username, password, ho_ten, email, fullname) 
+VALUES 
+('admin1', '1', 'Nguyen Van A', 'admin1@example.com', 'Nguyen Van A'),
+('admin2', 'password456', 'Tran Thi B', 'admin2@example.com', 'Tran Thi B');
+
+-- Dữ liệu mẫu cho bảng `danhmuc`
+INSERT INTO danhmuc (ten_danhmuc, mo_ta) 
+VALUES 
+('Tin tức công nghệ', 'Các bài viết về công nghệ mới nhất'),
+('Tin tức thể thao', 'Tin tức thể thao trong nước và quốc tế'),
+('Tin tức giải trí', 'Những tin tức về giải trí và sự kiện văn hóa');
+
+-- Dữ liệu mẫu cho bảng `tintuc`
+INSERT INTO tintuc (tieu_de, noi_dung, anh_bia, trang_thai, danhmuc_id, is_featured) 
+VALUES 
+('Apple ra mắt iPhone mới', 'Hôm nay Apple chính thức ra mắt iPhone 15 với nhiều tính năng mới...', 'iphone15.jpg', 'published', 1, TRUE),
+('Messi giành Quả bóng vàng lần thứ 8', 'Lionel Messi đã giành Quả bóng vàng lần thứ 8 trong sự nghiệp...', 'messi_ballon.jpg', 'published', 2, FALSE),
+('Dàn sao Hollywood tại Met Gala', 'Các ngôi sao Hollywood đã tỏa sáng tại sự kiện Met Gala với những bộ trang phục lộng lẫy...', 'metgala.jpg', 'draft', 3, FALSE);
+
+-- Dữ liệu mẫu cho bảng `users`
+INSERT INTO users (username, password, email) 
+VALUES 
+('user1', 'userpassword123', 'user1@example.com'),
+('user2', 'userpassword456', 'user2@example.com'),
+('user3', 'userpassword789', 'user3@example.com');
