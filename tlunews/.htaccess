@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /tlunews/
+
+# Quy tắc cho controller và action
+RewriteRule ^home$ index.php?controller=home&action=index [L,QSA]
+RewriteRule ^login$ index.php?controller=user&action=login [L,QSA]
+RewriteRule ^register$ index.php?controller=user&action=register [L,QSA]
+RewriteRule ^news$ index.php?controller=news&action=list [L,QSA]
+RewriteRule ^news/([0-9]+)$ index.php?controller=news&action=detail&id=$1 [L,QSA]
+RewriteRule ^admin$ index.php?controller=admin&action=dashboard [L,QSA]
